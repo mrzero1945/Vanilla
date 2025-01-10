@@ -15,7 +15,7 @@ export function SiteHeader() {
             alt="Nature Exquisite Nusantara"
             width={180}
             height={40}
-            className="h-10 w-auto"
+            className="h-28 w-auto"
           />
         </Link>
         <Sheet>

@@ -3,7 +3,7 @@
 import { useState, useEffect, useRef } from "react";
 import Image from "next/image";
 import { gsap } from "gsap";
-import { CheckCircle2, Users, Building2, Globe2 } from "lucide-react";
+import { CheckCircle2, Users, Building2, Globe2, InfoIcon } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import {
   Accordion,
@@ -46,69 +46,65 @@ const values = [
 
 const faqs = [
   {
-    question: "What types of vanilla products do you offer?",
-    answer:
-      "We offer a range of premium vanilla products including whole vanilla beans, vanilla extract, and vanilla powder. All our products are sourced from sustainable farms in Indonesia.",
+    "question": "What products does PT Nature’s Exquisite Nusantara specialize in?",
+    "answer": "We specialize in exporting vanilla beans, with plans to expand our portfolio to include coffee, cocoa, and spices."
   },
   {
-    question: "How do you ensure the quality of your products?",
-    answer:
-      "We maintain strict quality control measures throughout our supply chain. This includes careful selection of vanilla plants, proper curing and processing techniques, and rigorous testing before packaging.",
+    "question": "Where do you source your products?",
+    "answer": "Our products are sourced directly from trusted farmers across Indonesia. We prioritize sustainability, ethical practices, and premium quality."
   },
   {
-    question: "Do you offer bulk orders for businesses?",
-    answer:
-      "Yes, we cater to businesses of all sizes and offer bulk ordering options. Please contact our sales team for more information on bulk pricing and quantities.",
+    "question": "Which countries do you export to?",
+    "answer": "We currently export to markets in Asia and Europe, partnering with businesses such as shops, factories, and industries."
   },
   {
-    question: "What makes Indonesian vanilla unique?",
-    answer:
-      "Indonesian vanilla, particularly from regions like Papua, is known for its rich, creamy flavor profile with subtle notes of chocolate. The unique climate and soil conditions contribute to its distinctive taste.",
+    "question": "How do you ensure product quality?",
+    "answer": "We have strict quality control measures at every stage of the process—from sourcing and processing to packaging—to ensure our products meet international standards."
   },
   {
-    question: "How do you support local farmers?",
-    answer:
-      "We work directly with local farming communities, ensuring fair wages and sustainable farming practices. We also invest in education and infrastructure in these communities to promote long-term growth.",
+    "question": "Are your products sustainably sourced?",
+    "answer": "Absolutely! Sustainability is at the heart of our operations. We work closely with farmers to promote eco-friendly farming methods and ethical trade practices."
   },
+  {
+    "question": "Do you offer customized packaging?",
+    "answer": "Yes, we provide tailored packaging solutions to meet the unique needs of our clients and their industries."
+  },
+  {
+    "question": "Can I request samples of your products?",
+    "answer": "Of course! Contact us directly to discuss your requirements, and we’ll arrange samples based on availability."
+  },
+  {
+    "question": "How can I place an order or inquire about your products?",
+    "answer": "You can reach out to us through our website or email, and our team will guide you through the process step by step."
+  }
 ];
 
 const timelineEvents = [
   {
-    year: 2008,
-    title: "Company Founded",
-    description:
-      "Nature Exquisite Nusantara was established with a vision to bring premium Indonesian vanilla to the global market.",
+    "year": 2024,
+    "title": "Company Establishment",
+    "description": "PT Nature’s Exquisite Nusantara was officially established as a sole private company."
   },
   {
-    year: 2010,
-    title: "Sustainable Farming Initiative",
-    description:
-      "Launched our first partnership program with local farmers to implement sustainable farming practices.",
+    "year": 2024,
+    "title": "Export Initiation",
+    "description": "Began exporting premium vanilla beans to Asia and Europe."
   },
   {
-    year: 2015,
-    title: "Expansion to Global Markets",
-    description:
-      "Began exporting our premium vanilla products to international markets, reaching 10+ countries.",
+    "year": 2025,
+    "title": "Product Expansion",
+    "description": "Expanded product offerings to include coffee and cocoa beans."
   },
   {
-    year: 2018,
-    title: "Organic Certification",
-    description:
-      "Achieved organic certification for our vanilla products, ensuring chemical-free cultivation.",
+    "year": 2025,
+    "title": "Sustainability Initiatives",
+    "description": "Launched sustainability initiatives to strengthen partnerships with local farmers."
   },
   {
-    year: 2020,
-    title: "Launch of Research Center",
-    description:
-      "Opened our state-of-the-art vanilla research and development center to drive innovation in cultivation and processing.",
-  },
-  {
-    year: 2023,
-    title: "Carbon Neutral Operations",
-    description:
-      "Reached carbon neutrality across all our operations through offsetting and sustainable practices.",
-  },
+    "year": 2026,
+    "title": "New Products Introduction",
+    "description": "Introduced spices and other premium agricultural products to our export portfolio."
+  }
 ];
 
 export default function AboutPage() {
@@ -154,9 +150,7 @@ export default function AboutPage() {
             className="text-xl max-w-2xl mx-auto"
             ref={subtitleRef}
           >
-            Leading Indonesian exporter of premium vanilla products, committed
-            to quality, sustainability, and excellence in global agricultural
-            trade.
+            While vanilla beans are our flagship product, we are actively expanding our product offerings to include coffee, cocoa, and spices. Our mission is to supply not only premium raw materials but also to support the growth and success of our global partners through personalized service and exceptional quality.
           </p>
         </div>
       </section>
@@ -167,23 +161,22 @@ export default function AboutPage() {
           <Tabs value={activeTab} onValueChange={setActiveTab} className="space-y-8">
             <TabsList className="grid w-full grid-cols-1 md:grid-cols-4">
               <TabsTrigger value="story">Our Story</TabsTrigger>
-              <TabsTrigger value="mission">Mission & Values</TabsTrigger>
+              <TabsTrigger value="mission">Mission & Vision</TabsTrigger>
               <TabsTrigger value="timeline">Company Timeline</TabsTrigger>
               <TabsTrigger value="faq">FAQ</TabsTrigger>
             </TabsList>
             <TabsContent value="story" className="space-y-8">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
                 <div>
-                  <h2 className="text-3xl font-bold mb-4">Our Journey</h2>
+                  <h2 className="text-3xl font-bold mb-4">Company Journey</h2>
                   <p className="mb-4">
-                    Nature Exquisite Nusantara was founded with a vision to bring Indonesia's finest
-                    agricultural products to the global market. Our journey began with vanilla,
-                    carefully cultivated in the rich soils of Indonesia.
+                  At PT Nature’s Exquisite Nusantara, our journey began with a deep passion for Indonesia’s rich agricultural heritage. Walking through lush vanilla plantations and connecting with local farmers, we saw an opportunity to share these treasures with the world. Founded in 2024, our company started with a focus on premium vanilla beans, showcasing their superior quality and distinctive flavor.
+                  </p>
+                  <p className="mb-4">
+                  As we grew, we expanded our product offerings to include coffee, cocoa, and spices, reflecting our commitment to providing the finest agricultural products. Our journey is about more than exports; it’s about building strong partnerships, empowering farming communities, and championing sustainable practices.
                   </p>
                   <p>
-                    Today, we are proud to be a trusted supplier to businesses worldwide, maintaining
-                    the highest standards of quality while promoting sustainable farming practices
-                    that benefit both our communities and the environment.
+                  Today, PT Nature’s Exquisite Nusantara is proud to serve clients across Asia and Europe, representing Indonesia’s agricultural excellence on a global scale. As we look to the future, we remain dedicated to innovation, sustainability, and creating lasting value for our partners and communities.
                   </p>
                 </div>
                 <div className="relative h-[400px] rounded-lg overflow-hidden">
@@ -211,32 +204,31 @@ export default function AboutPage() {
               <div>
                 <h2 className="text-3xl font-bold mb-4">Our Mission</h2>
                 <p className="text-lg">
-                  To deliver the finest Indonesian vanilla products to the world, while fostering sustainable 
-                  agricultural practices and empowering local farming communities.
+                • To deliver premium-quality raw materials, including vanilla beans, coffee, cocoa, and spices, to global markets.<br/>
+ • To empower Indonesian farmers through sustainable and ethical trade practices.<br/>
+ • To support the growth and success of our global partners with personalized service and exceptional quality.<br/>
                 </p>
               </div>
               <div>
-                <h2 className="text-3xl font-bold mb-4">Our Values</h2>
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                  {values.map((value, index) => (
-                    <Card key={index}>
-                      <CardContent className="p-6">
-                        <value.icon className="h-10 w-10 text-primary mb-4" />
-                        <h3 className="text-xl font-semibold mb-2">{value.title}</h3>
-                        <p className="text-muted-foreground">{value.description}</p>
-                      </CardContent>
-                    </Card>
-                  ))}
-                </div>
+                <h2 className="text-3xl font-bold mb-4">Our Vision</h2>
+                <p className="text-lg">
+                • To be a globally recognized leader in the export of Indonesia’s finest agricultural products.<br/>
+ • To inspire a future where quality, sustainability, and trust define global trade.<br/>
+ • To represent Indonesia’s agricultural excellence, bringing its unique flavors and traditions to the world.<br/>
+                </p>
               </div>
             </TabsContent>
             <TabsContent value="timeline" className="space-y-8">
               <h2 className="text-3xl font-bold mb-4">Our Journey Through Time</h2>
               <div className="relative border-l border-gray-200 ml-3">
-                {timelineEvents.map((event, index) => (
+              {timelineEvents.map((event, index) => (
                   <div key={index} className="mb-10 ml-6">
                     <span className="absolute flex items-center justify-center w-6 h-6 bg-primary rounded-full -left-3 ring-8 ring-white">
-                      <CheckCircle2 className="w-3 h-3 text-white" />
+                      {index === 3 || index === 4 ? (
+                        <InfoIcon className="w-3 h-3 text-white" />
+                      ) : (
+                        <CheckCircle2 className="w-3 h-3 text-white" />
+                      )}
                     </span>
                     <h3 className="flex items-center mb-1 text-lg font-semibold text-gray-900">
                       {event.title}
