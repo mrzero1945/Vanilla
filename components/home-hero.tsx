@@ -4,7 +4,7 @@ import Link from "next/link"
 import { ArrowRight } from 'lucide-react'
 import { Button } from "@/components/ui/button"
 import dynamic from 'next/dynamic'
-import Plantation from "@/resources/plant-2.jpg"
+import Plantation from "@/resources/vanilla-flower.jpg"
 const AnimatedContent = dynamic(() => import('./animated-content').then((mod) => mod.AnimatedContent), { ssr: false })
 
 export function HomeHero() {

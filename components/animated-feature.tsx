@@ -14,7 +14,7 @@ interface AnimatedFeatureProps {
 export function AnimatedFeature({ icon, title, description, image }: AnimatedFeatureProps) {
   return (
     <AnimatedFeatureContent>
-      <div className="bg-background/60 backdrop-blur p-6 rounded-lg shadow-lg">
+      <div className="bg-background/60 backdrop-blur p-6 rounded-lg shadow-lg w-full h-full">
         <div className="mb-4 text-primary">{icon}</div>
         <h3 className="text-xl font-semibold mb-2">{title}</h3>
         <p className="text-muted-foreground mb-4">{description}</p>
@@ -23,7 +23,7 @@ export function AnimatedFeature({ icon, title, description, image }: AnimatedFea
             src={image}
             alt={title}
             fill
-            className="object-cover"
+            className=""
           />
         </div>
       </div>

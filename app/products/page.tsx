@@ -256,7 +256,7 @@ export default function ProductsPage() {
                         src={product.image}
                         alt={product.name}
                         fill
-                        className="object-cover"
+                        className="object-cover blur-[2px]"
                       />
                     </div>
                     <div className="p-6 md:p-8">

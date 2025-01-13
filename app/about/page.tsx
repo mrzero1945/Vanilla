@@ -81,31 +81,37 @@ const faqs = [
 
 const timelineEvents = [
   {
-    "year": 2024,
-    "title": "Company Establishment",
-    "description": "PT Nature’s Exquisite Nusantara was officially established as a sole private company."
+    "year": 2017,
+    "title": "Foundation and Vision",
+    "description": "PT Nature’s Exquisite Nusantara was founded with a clear vision: to bring Indonesia’s finest vanilla to the local market. In our early years, we focused on establishing strong roots within Indonesia by forging close partnerships with local farmers and ensuring high-quality, sustainable practices that would set us apart."
+  },
+  {
+    "year": 2018,
+    "title": "Building Sustainable Partnerships",
+    "description": "With a commitment to environmental stewardship, we initiated our Sustainable Farming Initiative, working directly with local farmers to promote eco-friendly practices that preserve the health of the land and support the long-term prosperity of farming communities. This foundational program was pivotal in creating a sustainable supply chain."
+  },
+  {
+    "year": 2020,
+    "title": "Achieving Organic Certification",
+    "description": "Our relentless dedication to quality and sustainability paid off when we earned organic certification for our vanilla products. This achievement affirmed that our offerings are grown without harmful chemicals, reinforcing our commitment to both sustainability and premium quality."
+  },
+  {
+    "year": 2023,
+    "title": "Carbon Neutral Operations",
+    "description": "We took a significant step in our sustainability journey by achieving carbon neutrality across our operations. This milestone reflects our ongoing efforts to reduce emissions and implement energy-efficient practices, furthering our dedication to environmentally conscious production."
   },
   {
     "year": 2024,
-    "title": "Export Initiation",
-    "description": "Began exporting premium vanilla beans to Asia and Europe."
+    "title": "Expansion to Global Markets",
+    "description": "Building on our success in the local market, we began expanding internationally. Our premium vanilla products were introduced to a global audience, marking the beginning of PT Nature’s Exquisite Nusantara’s journey to share Indonesia’s agricultural treasures with the world."
   },
   {
-    "year": 2025,
-    "title": "Product Expansion",
-    "description": "Expanded product offerings to include coffee and cocoa beans."
-  },
-  {
-    "year": 2025,
-    "title": "Sustainability Initiatives",
-    "description": "Launched sustainability initiatives to strengthen partnerships with local farmers."
-  },
-  {
-    "year": 2026,
-    "title": "New Products Introduction",
-    "description": "Introduced spices and other premium agricultural products to our export portfolio."
+    "year": "2025 and Beyond",
+    "title": "Future Growth and Innovation",
+    "description": "As we look to the future, PT Nature’s Exquisite Nusantara plans to broaden its product offerings and deepen its global presence. Our focus remains on introducing other premium Indonesian agricultural products, including coffee, cocoa, and spices, while continuing to champion sustainability and fair trade practices."
   }
 ];
+
 
 export default function AboutPage() {
   const [activeTab, setActiveTab] = useState("story");
@@ -224,11 +230,9 @@ export default function AboutPage() {
               {timelineEvents.map((event, index) => (
                   <div key={index} className="mb-10 ml-6">
                     <span className="absolute flex items-center justify-center w-6 h-6 bg-primary rounded-full -left-3 ring-8 ring-white">
-                      {index === 3 || index === 4 ? (
-                        <InfoIcon className="w-3 h-3 text-white" />
-                      ) : (
+
                         <CheckCircle2 className="w-3 h-3 text-white" />
-                      )}
+           
                     </span>
                     <h3 className="flex items-center mb-1 text-lg font-semibold text-gray-900">
                       {event.title}

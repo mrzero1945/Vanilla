@@ -13,12 +13,12 @@ import { NewsletterSignup } from "@/components/newsletter-signup"
 import { HomeHero } from "@/components/home-hero"
 import GlobalExportImg from "@/resources/vanilla-3.jpg"
 import PremiumImg from "@/resources/vanilla-beans.webp"
-import CertImg from "@/resources/vanilla-product.webp"
+import CertImg from "@/resources/certificate-global-export.png"
 import SusImg from "@/resources/sus-prac.jpg"
 import VanillaBeansImg from "@/resources/vanilla-beans.webp"
 import VanillaExtractImg from "@/resources/vanilla-extract.webp"
 import VanillaPowderImg from "@/resources/vanilla-powder.jpg"
-import VanillaPlant from "@/resources/plant-2.jpg"
+import VanillaPlant from "@/resources/vanilla-flower.jpg"
 import CtaBg from "@/resources/vanila.jpg"
 import { metadata } from './page.metadata'
 
@@ -68,7 +68,7 @@ export default function Home() {
         <section className="py-16 bg-muted/50">
           <div className="container">
             <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">Why Choose Nature Exquisite?</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 flex">
               <AnimatedFeature
                 icon={<Globe2 className="h-12 w-12" />}
                 title="Global Export"
@@ -90,7 +90,7 @@ export default function Home() {
               <AnimatedFeature
                 icon={<ShieldCheck className="h-12 w-12" />}
                 title="Certified Products"
-                description="Meeting rigorous international quality and safety standards."
+                description="Meeting rigorous international quality and safety standards. Adhering to strict global quality"
                 image={CertImg.src}
               />
             </div>
